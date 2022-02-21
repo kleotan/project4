@@ -1,0 +1,11 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+    <h2>{{ post.title }}</h2>
+
+        {{ post.text }}
+    
+    {% endif %}  
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+    <h2>Add new post</h2>
+
+
+    <form action="{{ get_absolute_url }}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form }}
+        </div>
+        <input class="btn btn-primary" type="submit" value="Publish">
+    </form>
+
+    {% endif %}  
+
+{% endblock %}
